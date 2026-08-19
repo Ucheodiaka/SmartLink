@@ -1,0 +1,2051 @@
+/* =====================================================
+   SMARTLINK LIMITED
+   Global Stylesheet
+   File: css/index.css
+===================================================== */
+
+
+/* =====================================================
+   1. CSS VARIABLES
+===================================================== */
+
+:root {
+
+    /* Brand */
+    --primary: #0b2545;
+    --primary-dark: #071a32;
+    --primary-light: #153b64;
+
+    --secondary: #1fa2a6;
+    --secondary-dark: #157b7f;
+    --secondary-light: #dff6f6;
+
+    /* Neutral */
+    --white: #ffffff;
+    --background: #f7f9fc;
+    --background-soft: #f1f5f9;
+
+    --text-dark: #18212f;
+    --text-body: #52606d;
+    --text-muted: #778391;
+
+    --border: #dfe6ed;
+
+    /* Status */
+    --success: #19a974;
+
+    /* Shadows */
+    --shadow-sm:
+        0 5px 20px rgba(11, 37, 69, 0.06);
+
+    --shadow-md:
+        0 15px 45px rgba(11, 37, 69, 0.1);
+
+    --shadow-lg:
+        0 30px 80px rgba(11, 37, 69, 0.14);
+
+
+    /* Radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+
+    /* Width */
+    --container-width: 1200px;
+
+    /* Transitions */
+    --transition:
+        0.25s ease;
+}
+
+
+/* =====================================================
+   2. RESET
+===================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    background: var(--white);
+    color: var(--text-dark);
+
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   3. TYPOGRAPHY
+===================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary);
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+
+h1 {
+    font-size: clamp(2.8rem, 6vw, 5.4rem);
+    letter-spacing: -0.045em;
+}
+
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    letter-spacing: -0.035em;
+}
+
+
+h3 {
+    font-size: 1.3rem;
+}
+
+
+p {
+    color: var(--text-body);
+}
+
+
+.large-text {
+    font-size: 1.15rem;
+}
+
+
+.strong-text {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+
+/* =====================================================
+   4. GLOBAL LAYOUT
+===================================================== */
+
+.container {
+    width: min(
+        calc(100% - 40px),
+        var(--container-width)
+    );
+
+    margin-inline: auto;
+}
+
+
+.section {
+    padding: 110px 0;
+}
+
+
+.two-column {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   5. GLOBAL EYEBROW / SECTION TITLE
+===================================================== */
+
+.section-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--secondary-dark);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+.light-eyebrow {
+    color: #94e1e3;
+}
+
+
+.section-title-centered {
+    max-width: 760px;
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+
+.section-title-centered p {
+    max-width: 630px;
+    margin: 20px auto 0;
+
+    font-size: 1.05rem;
+}
+
+
+/* =====================================================
+   6. BUTTONS
+===================================================== */
+
+.button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+
+    padding: 13px 24px;
+
+    border-radius: var(--radius-sm);
+
+    font-size: 0.92rem;
+    font-weight: 700;
+
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition);
+}
+
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+
+.button-primary {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+
+.button-primary:hover {
+    background: var(--secondary-dark);
+}
+
+
+.button-secondary {
+    border: 1px solid var(--border);
+
+    background: var(--white);
+
+    color: var(--primary);
+}
+
+
+.button-secondary:hover {
+    border-color: var(--primary);
+
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+
+.button-light {
+    background: var(--white);
+    color: var(--primary);
+}
+
+
+.button-light:hover {
+    background: var(--secondary-light);
+}
+
+
+.text-link-light {
+    color: var(--white);
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   7. HEADER
+===================================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    border-bottom:
+        1px solid rgba(223, 230, 237, 0.8);
+
+    backdrop-filter: blur(18px);
+}
+
+
+.nav-container {
+    min-height: 78px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.brand {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+.brand-mark {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    color: var(--white);
+
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1;
+}
+
+
+.brand-name {
+    color: var(--primary);
+
+    font-size: 1.15rem;
+    font-weight: 800;
+
+    letter-spacing: -0.02em;
+}
+
+
+.brand-type {
+    margin-top: 5px;
+
+    color: var(--text-muted);
+
+    font-size: 0.58rem;
+    font-weight: 700;
+
+    letter-spacing: 0.22em;
+}
+
+
+.main-nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+}
+
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 27px;
+}
+
+
+.nav-links a {
+    position: relative;
+
+    padding: 28px 0;
+
+    color: var(--text-body);
+
+    font-size: 0.89rem;
+    font-weight: 600;
+
+    transition: color var(--transition);
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+}
+
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 20px;
+
+    height: 2px;
+
+    border-radius: 4px;
+
+    background: var(--secondary);
+}
+
+
+.mobile-menu-button {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 8px;
+
+    background: transparent;
+}
+
+
+.mobile-menu-button span {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    margin: 5px 0;
+
+    background: var(--primary);
+}
+
+
+/* =====================================================
+   8. HERO
+===================================================== */
+
+.hero {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 100px 0 120px;
+
+    background:
+        radial-gradient(
+            circle at 82% 20%,
+            rgba(31, 162, 166, 0.13),
+            transparent 28%
+        ),
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #f7fafc
+        );
+}
+
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 480px;
+    height: 480px;
+
+    left: -280px;
+    top: 80px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(31, 162, 166, 0.13);
+}
+
+
+.hero-grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.08fr)
+        minmax(420px, 0.92fr);
+
+    gap: 85px;
+
+    align-items: center;
+}
+
+
+.hero h1 span {
+    color: var(--secondary);
+}
+
+
+.hero-description {
+    max-width: 660px;
+
+    margin-top: 28px;
+
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 35px;
+}
+
+
+.hero-points {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 22px;
+
+    margin-top: 34px;
+}
+
+
+.hero-point {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--text-body);
+
+    font-size: 0.86rem;
+    font-weight: 600;
+}
+
+
+.check-icon {
+    width: 20px;
+    height: 20px;
+
+    display: inline-grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--secondary-light);
+
+    color: var(--secondary-dark);
+
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   9. HERO SYSTEM CARD
+===================================================== */
+
+.hero-visual {
+    position: relative;
+}
+
+
+.hero-visual::before {
+    content: "";
+
+    position: absolute;
+
+    width: 88%;
+    height: 90%;
+
+    right: -25px;
+    bottom: -28px;
+
+    border-radius: var(--radius-xl);
+
+    background: var(--secondary-light);
+}
+
+
+.system-card {
+    position: relative;
+    z-index: 2;
+
+    padding: 32px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.4);
+
+    border-radius: var(--radius-xl);
+
+    background: var(--primary);
+
+    box-shadow: var(--shadow-lg);
+
+    color: var(--white);
+}
+
+
+.system-card-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+
+.system-card h3 {
+    margin-top: 6px;
+
+    color: var(--white);
+
+    font-size: 1.45rem;
+}
+
+
+.mini-label {
+    color: #8edbdd;
+
+    font-size: 0.63rem;
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+}
+
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #51e5aa;
+
+    box-shadow:
+        0 0 0 8px rgba(81, 229, 170, 0.1);
+}
+
+
+.system-dashboard {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+
+.dashboard-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 18px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: var(--radius-md);
+
+    background:
+        rgba(255, 255, 255, 0.055);
+}
+
+
+.dashboard-icon {
+    width: 35px;
+    height: 35px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background:
+        rgba(31, 162, 166, 0.2);
+
+    color: #9cebed;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+
+.dashboard-item small {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #87a4c1;
+
+    font-size: 0.55rem;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+}
+
+
+.dashboard-item strong {
+    font-size: 0.93rem;
+}
+
+
+.system-flow {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 30px;
+
+    color: #aac0d5;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+}
+
+
+.flow-line {
+    width: 30px;
+    height: 1px;
+
+    margin: 0 10px;
+
+    background:
+        rgba(255, 255, 255, 0.25);
+}
+
+
+/* =====================================================
+   10. BUSINESS CHALLENGE
+===================================================== */
+
+.business-challenge {
+    background: var(--white);
+}
+
+
+.business-challenge h2 {
+    max-width: 570px;
+}
+
+
+.section-content p {
+    margin-bottom: 20px;
+
+    font-size: 1.04rem;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   11. SOLUTIONS
+===================================================== */
+
+.solutions-section {
+    background: var(--background);
+}
+
+
+.solutions-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.solution-card {
+    min-height: 330px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 32px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    background: var(--white);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+}
+
+
+.solution-card:hover {
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(31, 162, 166, 0.45);
+
+    box-shadow: var(--shadow-md);
+}
+
+
+.solution-number {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 30px;
+
+    border-radius: 50%;
+
+    background: var(--secondary-light);
+
+    color: var(--secondary-dark);
+
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+
+.solution-card h3 {
+    margin-bottom: 14px;
+}
+
+
+.solution-card p {
+    line-height: 1.75;
+}
+
+
+.solution-card a {
+    margin-top: auto;
+    padding-top: 25px;
+
+    color: var(--secondary-dark);
+
+    font-size: 0.88rem;
+    font-weight: 800;
+}
+
+
+.solution-card-highlight {
+    background: var(--primary);
+}
+
+
+.solution-card-highlight h3,
+.solution-card-highlight p {
+    color: var(--white);
+}
+
+
+.solution-card-highlight p {
+    opacity: 0.75;
+}
+
+
+.solution-card-highlight a {
+    color: #92e7e9;
+}
+
+
+/* =====================================================
+   12. APPROACH
+===================================================== */
+
+.approach-section {
+    background: var(--white);
+}
+
+
+.approach-header {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 0.8fr;
+
+    gap: 60px;
+
+    align-items: end;
+
+    margin-bottom: 65px;
+}
+
+
+.approach-header p {
+    max-width: 500px;
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+.approach-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+}
+
+
+.approach-step {
+    min-height: 245px;
+
+    padding: 30px;
+
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+
+.approach-step span {
+    display: block;
+
+    margin-bottom: 45px;
+
+    color: var(--secondary);
+
+    font-size: 0.74rem;
+    font-weight: 800;
+}
+
+
+.approach-step h3 {
+    margin-bottom: 12px;
+}
+
+
+.approach-step p {
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   13. BUSINESS CONTROL SYSTEM
+===================================================== */
+
+.control-system-section {
+    overflow: hidden;
+
+    background: var(--background-soft);
+}
+
+
+.control-system-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+.control-system-content h2 {
+    margin-bottom: 24px;
+}
+
+
+.control-system-content .large-text {
+    max-width: 610px;
+
+    line-height: 1.8;
+}
+
+
+.control-features {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin: 28px 0 38px;
+}
+
+
+.control-features span {
+    padding: 8px 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 999px;
+
+    background: var(--white);
+
+    color: var(--primary);
+
+    font-size: 0.77rem;
+    font-weight: 700;
+}
+
+
+.control-system-visual {
+    position: relative;
+
+    min-height: 470px;
+}
+
+
+.control-circle {
+    position: absolute;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+
+.circle-main {
+    width: 230px;
+    height: 230px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    box-shadow: var(--shadow-lg);
+
+    font-size: 1.15rem;
+}
+
+
+.circle-one,
+.circle-two,
+.circle-three,
+.circle-four {
+    width: 95px;
+    height: 95px;
+
+    border:
+        1px solid rgba(31, 162, 166, 0.3);
+
+    background: var(--white);
+
+    color: var(--secondary-dark);
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+.circle-one {
+    left: 10%;
+    top: 12%;
+}
+
+
+.circle-two {
+    right: 10%;
+    top: 12%;
+}
+
+
+.circle-three {
+    left: 10%;
+    bottom: 12%;
+}
+
+
+.circle-four {
+    right: 10%;
+    bottom: 12%;
+}
+
+
+/* =====================================================
+   14. PHILOSOPHY
+===================================================== */
+
+.philosophy-section {
+    padding: 130px 0;
+
+    background: var(--primary);
+
+    text-align: center;
+}
+
+
+.philosophy-section h2 {
+    color: var(--white);
+
+    font-size: clamp(2.8rem, 6vw, 5.8rem);
+}
+
+
+.philosophy-section h2 span {
+    color: #8fe1e3;
+}
+
+
+.philosophy-section p {
+    max-width: 720px;
+
+    margin: 26px auto 0;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 1.1rem;
+}
+
+
+/* =====================================================
+   15. INDUSTRIES
+===================================================== */
+
+.industries-preview {
+    background: var(--white);
+}
+
+
+.industry-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+
+.industry-list div {
+    padding: 23px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-md);
+
+    text-align: center;
+
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+
+.center-action {
+    margin-top: 40px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   16. FINAL CTA
+===================================================== */
+
+.final-cta {
+    padding: 90px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--secondary-dark),
+            var(--secondary)
+        );
+}
+
+
+.final-cta-content {
+    display: grid;
+
+    grid-template-columns:
+        1fr auto;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+.final-cta h2 {
+    max-width: 700px;
+
+    color: var(--white);
+}
+
+
+.final-cta p {
+    max-width: 670px;
+
+    margin-top: 20px;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 1.05rem;
+}
+
+
+.final-cta-actions {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   17. FOOTER
+===================================================== */
+
+.site-footer {
+    padding: 80px 0 25px;
+
+    background: #07182d;
+
+    color: var(--white);
+}
+
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1.3fr 1fr;
+
+    gap: 60px;
+}
+
+
+.site-footer .brand-name {
+    color: var(--white);
+}
+
+
+.site-footer .brand-type {
+    color: #849ab0;
+}
+
+
+.footer-brand p {
+    max-width: 380px;
+
+    margin: 22px 0 18px;
+
+    color: #8599ad;
+
+    line-height: 1.8;
+}
+
+
+.footer-brand strong {
+    color: #afc7db;
+
+    font-size: 0.85rem;
+}
+
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+
+.footer-column h4 {
+    margin-bottom: 9px;
+
+    color: var(--white);
+
+    font-size: 0.88rem;
+}
+
+
+.footer-column a,
+.footer-column span {
+    color: #8599ad;
+
+    font-size: 0.85rem;
+
+    transition: color var(--transition);
+}
+
+
+.footer-column a:hover {
+    color: var(--white);
+}
+
+
+.footer-bottom {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    margin-top: 65px;
+    padding-top: 25px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.footer-bottom p,
+.footer-bottom a {
+    color: #71869a;
+
+    font-size: 0.76rem;
+}
+
+
+.footer-bottom div {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* =====================================================
+   18. TABLET RESPONSIVENESS
+===================================================== */
+
+@media (max-width: 1050px) {
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero-content {
+        max-width: 800px;
+    }
+
+
+    .hero-visual {
+        max-width: 650px;
+    }
+
+
+    .solutions-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .approach-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .control-system-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .control-system-visual {
+        max-width: 620px;
+    }
+
+
+    .footer-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   19. MOBILE NAVIGATION
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+
+    .main-nav {
+        position: absolute;
+
+        top: 78px;
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        padding: 24px 20px 30px;
+
+        border-bottom:
+            1px solid var(--border);
+
+        background: var(--white);
+
+        box-shadow: var(--shadow-md);
+    }
+
+
+    .main-nav.nav-open {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 20px;
+    }
+
+
+    .nav-links {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+    }
+
+
+    .nav-links a {
+        display: block;
+
+        padding: 14px 0;
+
+        border-bottom:
+            1px solid var(--border);
+    }
+
+
+    .nav-links a.active::after {
+        display: none;
+    }
+
+
+    .nav-cta {
+        width: 100%;
+    }
+
+
+    .two-column {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .approach-header {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .final-cta-content {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .final-cta-actions {
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =====================================================
+   20. SMALL MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .container {
+        width: min(
+            calc(100% - 30px),
+            var(--container-width)
+        );
+    }
+
+
+    .section {
+        padding: 80px 0;
+    }
+
+
+    .hero {
+        padding: 70px 0 90px;
+    }
+
+
+    .hero-grid {
+        gap: 55px;
+    }
+
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+
+    .hero-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .hero-actions .button {
+        width: 100%;
+    }
+
+
+    .system-card {
+        padding: 22px;
+    }
+
+
+    .system-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+
+    .system-flow {
+        flex-wrap: wrap;
+    }
+
+
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .solution-card {
+        min-height: auto;
+    }
+
+
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .control-system-visual {
+        min-height: 360px;
+    }
+
+
+    .circle-main {
+        width: 170px;
+        height: 170px;
+    }
+
+
+    .circle-one,
+    .circle-two,
+    .circle-three,
+    .circle-four {
+        width: 70px;
+        height: 70px;
+
+        font-size: 0.58rem;
+    }
+
+
+    .industry-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+/* ============================================================
+   GLOBAL FLOATING ACTIONS
+   WhatsApp + Scroll To Top
+============================================================ */
+
+
+/* ============================================================
+   1. FLOATING CONTAINER
+============================================================ */
+
+.floating-actions {
+
+    position: fixed;
+
+    right: 24px;
+    bottom: 24px;
+
+    z-index: 9999;
+
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 12px;
+
+}
+
+
+
+/* ============================================================
+   2. GLOBAL FLOATING BUTTON
+============================================================ */
+
+.floating-action {
+
+    border: none;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+
+    box-shadow:
+
+        0 12px 35px
+
+        rgba(11, 37, 69, 0.18);
+
+
+    transition:
+
+        transform 0.25s ease,
+
+        box-shadow 0.25s ease,
+
+        opacity 0.3s ease,
+
+        visibility 0.3s ease,
+
+        background 0.25s ease;
+
+}
+
+
+.floating-action:hover {
+
+    transform:
+        translateY(-3px);
+
+
+    box-shadow:
+
+        0 18px 45px
+
+        rgba(11, 37, 69, 0.25);
+
+}
+
+
+
+/* ============================================================
+   3. WHATSAPP BUTTON
+============================================================ */
+
+.whatsapp-button {
+
+    min-height: 58px;
+
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+
+    padding:
+
+        8px 18px
+
+        8px 8px;
+
+
+    border-radius: 999px;
+
+
+    background: #25d366;
+
+
+    color: #ffffff;
+
+}
+
+
+
+/* ============================================================
+   4. WHATSAPP ICON
+============================================================ */
+
+.whatsapp-icon {
+
+    width: 42px;
+    height: 42px;
+
+
+    flex-shrink: 0;
+
+
+    display: grid;
+
+    place-items: center;
+
+
+    border-radius: 50%;
+
+
+    background:
+
+        rgba(
+            255,
+            255,
+            255,
+            0.16
+        );
+
+}
+
+
+.whatsapp-icon svg {
+
+    width: 23px;
+    height: 23px;
+
+}
+
+
+
+/* ============================================================
+   5. WHATSAPP TEXT
+============================================================ */
+
+.whatsapp-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.2;
+
+}
+
+
+.whatsapp-text small {
+
+    margin-bottom: 3px;
+
+
+    color:
+
+        rgba(
+            255,
+            255,
+            255,
+            0.8
+        );
+
+
+    font-size: 0.62rem;
+
+    font-weight: 600;
+
+}
+
+
+.whatsapp-text strong {
+
+    color: #ffffff;
+
+
+    font-size: 0.78rem;
+
+    font-weight: 750;
+
+}
+
+
+
+/* ============================================================
+   6. SCROLL TO TOP
+============================================================ */
+
+.scroll-top-button {
+
+    width: 50px;
+    height: 50px;
+
+
+    display: grid;
+
+    place-items: center;
+
+
+    border-radius: 50%;
+
+
+    background:
+        var(--primary);
+
+
+    color:
+        var(--white);
+
+
+    opacity: 0;
+
+    visibility: hidden;
+
+
+    transform:
+        translateY(15px);
+
+}
+
+
+
+/* ============================================================
+   7. SHOW SCROLL BUTTON
+============================================================ */
+
+.scroll-top-button.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+
+    transform:
+        translateY(0);
+
+}
+
+
+
+/* ============================================================
+   8. SCROLL BUTTON HOVER
+============================================================ */
+
+.scroll-top-button:hover {
+
+    background:
+        var(--secondary);
+
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+
+/* ============================================================
+   9. SCROLL ICON
+============================================================ */
+
+.scroll-top-button svg {
+
+    width: 21px;
+    height: 21px;
+
+}
+
+
+
+/* ============================================================
+   10. MOBILE
+============================================================ */
+
+@media (max-width: 650px) {
+
+    .floating-actions {
+
+        right: 16px;
+
+        bottom: 16px;
+
+        gap: 10px;
+
+    }
+
+
+    .whatsapp-button {
+
+        width: 52px;
+        height: 52px;
+
+        min-height: 52px;
+
+        padding: 5px;
+
+        justify-content: center;
+
+    }
+
+
+    .whatsapp-icon {
+
+        width: 42px;
+        height: 42px;
+
+    }
+
+
+    /*
+        Hide the wording on phones.
+        We keep only the WhatsApp icon.
+    */
+
+    .whatsapp-text {
+
+        display: none;
+
+    }
+
+
+    .scroll-top-button {
+
+        width: 48px;
+        height: 48px;
+
+    }
+
+}
+
+
+
+/* ============================================================
+   11. REDUCED MOTION ACCESSIBILITY
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .floating-action {
+
+        transition: none;
+
+    }
+
+}
