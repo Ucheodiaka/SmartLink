@@ -1,0 +1,222 @@
+/* =========================================
+   SMARTLINK ADMIN
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    background: #f4f7fa;
+
+    color: #18212f;
+
+}
+
+
+.admin-container {
+
+    width: 100%;
+
+    max-width: 650px;
+
+}
+
+
+.admin-card {
+
+    padding: 45px;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 20px 60px
+        rgba(11, 37, 69, 0.1);
+
+}
+
+
+.admin-heading {
+
+    margin-bottom: 35px;
+
+}
+
+
+.admin-heading span {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #1fa2a6;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.admin-heading h1 {
+
+    margin-bottom: 10px;
+
+    color: #0b2545;
+
+}
+
+
+.admin-heading p {
+
+    color: #52606d;
+
+    line-height: 1.6;
+
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.form-group label {
+
+    color: #0b2545;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+.form-group input {
+
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border:
+        1px solid #dfe6ed;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+
+}
+
+
+.form-group input:focus {
+
+    border-color: #1fa2a6;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(31, 162, 166, 0.1);
+
+}
+
+
+.form-group input:disabled {
+
+    background: #f4f7fa;
+
+    color: #778391;
+
+}
+
+
+.save-button {
+
+    min-height: 50px;
+
+    padding: 12px 24px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #1fa2a6;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.save-button:hover {
+
+    background: #157b7f;
+
+}
+
+
+.message {
+
+    margin-top: 20px;
+
+    font-size: 14px;
+
+}
+
+.logout-button {
+    margin-bottom: 30px;
+
+    padding: 9px 16px;
+
+    border:
+        1px solid #dfe6ed;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #0b2545;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.logout-button:hover {
+    background: #f4f7fa;
+}

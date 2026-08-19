@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071a32,
+            #0b2545
+        );
+
+    color: #18212f;
+}
+
+
+.login-page {
+    width: 100%;
+    max-width: 460px;
+}
+
+
+.login-card {
+    padding: 42px;
+
+    border-radius: 22px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.2);
+}
+
+
+/* BRAND */
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 45px;
+}
+
+
+.brand-mark {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b2545,
+            #1fa2a6
+        );
+
+    color: white;
+
+    font-weight: 800;
+}
+
+
+.brand > div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.brand strong {
+    color: #0b2545;
+
+    font-size: 18px;
+}
+
+
+.brand span {
+    margin-top: 3px;
+
+    color: #778391;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* HEADING */
+
+.login-heading {
+    margin-bottom: 30px;
+}
+
+
+.login-heading > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #1fa2a6;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.login-heading h1 {
+    margin-bottom: 10px;
+
+    color: #0b2545;
+
+    font-size: 32px;
+}
+
+
+.login-heading p {
+    color: #52606d;
+
+    line-height: 1.6;
+}
+
+
+/* FORM */
+
+form {
+    display: grid;
+
+    gap: 20px;
+}
+
+
+.form-group {
+    display: grid;
+
+    gap: 8px;
+}
+
+
+.form-group label {
+    color: #0b2545;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.form-group input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #dfe6ed;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+
+.form-group input:focus {
+    border-color: #1fa2a6;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(31, 162, 166, 0.1);
+}
+
+
+button {
+    min-height: 50px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #1fa2a6;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+button:hover {
+    background: #157b7f;
+}
+
+
+.message {
+    min-height: 20px;
+
+    color: #52606d;
+
+    font-size: 13px;
+}

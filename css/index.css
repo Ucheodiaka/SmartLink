@@ -521,6 +521,15 @@ p {
             #ffffff,
             #f7fafc
         );
+    background-image:  url("../images/smartlink-hero-background.png"),
+        linear-gradient(rgba(255, 255, 255, 0.85),rgba(255, 255, 255, 0.85));
+      
+
+    background-size: 100%;
+    top:-80px;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
 }
 
 
@@ -560,6 +569,9 @@ p {
 
 .hero h1 span {
     color: var(--secondary);
+}
+.hero h1{
+    color: var(--background);
 }
 
 
